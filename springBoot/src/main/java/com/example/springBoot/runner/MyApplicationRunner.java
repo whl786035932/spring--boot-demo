@@ -11,6 +11,7 @@ public class MyApplicationRunner implements ApplicationRunner, Ordered{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("#########################my application runner#############################");
+		
 	}
 
 	@Override
