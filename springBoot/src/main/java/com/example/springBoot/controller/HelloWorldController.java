@@ -5,7 +5,10 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.springBoot.readProperty.ExampleProperties;
 import com.example.springBoot.readProperty.InfoConfig;
+import com.example.springBoot.readProperty.LoadPropertyOrder;
+import com.example.springBoot.readProperty.ProfileProperty;
 import com.example.springBoot.readProperty.PropertySouceValue;
 import com.example.springBoot.readProperty.PropertySourceConfigurationProperties;
 import com.example.springBoot.readProperty.ReadPropertyConfig;
@@ -32,6 +35,13 @@ public class HelloWorldController {
 	
 	@Autowired
 	private PropertySourceConfigurationProperties configProperties;
+	
+	@Autowired
+	private LoadPropertyOrder  loadPropertyOrder;
+	
+	@Autowired 
+	private ProfileProperty ProfileProperty;
+	
 	
 	
 	@Autowired
@@ -72,4 +82,14 @@ public class HelloWorldController {
 	public String useEnvReadProperty() {
 		return  env.getProperty("db.username");
 	}
-}
+	
+	@RequestMapping("loadPropertyOrder")
+	public String loadPropertyOrder() {
+		return loadPropertyOrder.getName();
+	}
+	
+	@RequestMapping("ProfileProperty")
+	public String profileConfiguration() {
+		return ProfileProperty.getName();
+	}
+}	

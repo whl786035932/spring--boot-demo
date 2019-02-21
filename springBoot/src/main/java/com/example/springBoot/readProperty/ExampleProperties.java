@@ -1,4 +1,4 @@
-package com.example.springBoot.controller;
+package com.example.springBoot.readProperty;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -14,6 +14,9 @@ public class ExampleProperties {
 	
 	@Value("${com.example.description}")
 	private String description;
+	
+	
+	
 
 
 	public String getTitle() {

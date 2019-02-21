@@ -42,6 +42,9 @@
 		    <groupId>org.springframework.boot</groupId>  
 		    <artifactId>spring-boot-starter-thymeleaf</artifactId>  
 		</dependency>
+		
+		
+        
 		<dependency>
 		    <groupId>org.jsoup</groupId>
 		    <artifactId>jsoup</artifactId>
@@ -106,11 +109,20 @@
 		</dependency>
 		
 		<!-- 
+			spring session
 		 -->
 		<dependency>
 		    <groupId>org.springframework.session</groupId>
 		    <artifactId>spring-session-data-redis</artifactId>
 		</dependency>
+		
+		<!-- spring security -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        
+        
 	</dependencies>
 		
 	
